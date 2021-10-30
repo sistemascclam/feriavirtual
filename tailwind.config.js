@@ -8,15 +8,15 @@ module.exports = {
     },
     extend: {
       backgroundImage: theme => ({
-        'inicio': `url('/feriavirtual/images/fondoinicio.png')`,
-        'feria': `url('/feriavirtual/images/feria.webp')`,
-        'speakersbanner': `url('/feriavirtual/images/speakersbanner.jpg')`,
-        'conferenciafondo': `url('/feriavirtual/images/conferenciafondo.png')`,
-
-        // 'inicio': `url('/images/fondoinicio.png')`,
-        // 'feria': `url('/images/feria.webp')`,
-        // 'speakersbanner': `url('/images/speakersbanner.jpg')`,
-        // 'conferenciafondo': `url('/images/conferenciafondo.png')`,
+        // 'inicio': `url('/feriavirtual/images/fondoinicio.png')`,
+        // 'feria': `url('/feriavirtual/images/feria.webp')`,
+        // 'speakersbanner': `url('/feriavirtual/images/speakersbanner.jpg')`,
+        // 'conferenciafondo': `url('/feriavirtual/images/conferenciafondo.png')`,
+        
+        'inicio': `url('/images/fondoinicio.png')`,
+        'feria': `url('/images/feria.webp')`,
+        'speakersbanner': `url('/images/speakersbanner.jpg')`,
+        'conferenciafondo': `url('/images/conferenciafondo.png')`,
       }),
       colors: {
         blackText: '#3E3E3E',
