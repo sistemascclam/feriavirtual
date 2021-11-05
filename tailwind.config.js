@@ -14,7 +14,7 @@ module.exports = {
         // 'conferenciafondo': `url('/feriavirtual/images/conferenciafondo.png')`,
         
         'inicio': `url('/images/fondoinicio.png')`,
-        'feria': `url('/images/feria.webp')`,
+        'feria': `url('/images/feriafondotemp.png')`,
         'speakersbanner': `url('/images/speakersbanner.jpg')`,
         'conferenciafondo': `url('/images/conferenciafondo.png')`,
       }),

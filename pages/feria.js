@@ -64,7 +64,7 @@ export default function Feria() {
       </Head>
       <div className="md:bg-feria lg:bg-feria xl:bg-feria 2xl:bg-feria bg-cover bg-center min-h-screen w-full relative">
         <div className="w-full pl-0 lg:pl-36 pt-5 flex flex-wrap justify-center">
-          <FeriaSmallCard />
+          {/* <FeriaSmallCard /> */}
           {/* <div className="w-96 h-52 bg-black border-2 bg-opacity-70"></div>
           <div className="w-96 h-52 bg-black border-2 bg-opacity-70"></div>
           <div className="w-96 h-52 bg-black border-2 bg-opacity-70"></div>
