@@ -6,10 +6,10 @@ import Ended from "./Ended";
 import { logout } from "../../redux/actions/auth"
 import { useDispatch, useSelector } from 'react-redux';
 
-const inicio = "11/18/2021 00:00:00"
-const final = "11/20/2021 00:00:00"
-// const inicio = "10/10/2021 00:00:00"
-// const final = "12/20/2021 00:00:00"
+// const inicio = "11/18/2021 00:00:00"
+// const final = "11/20/2021 00:00:00"
+const inicio = "10/10/2021 00:00:00"
+const final = "12/20/2021 00:00:00"
 
 export default function index() {
     const dispatch = useDispatch();
