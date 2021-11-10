@@ -6,7 +6,6 @@ import VideoPlayer from "../components/Modals/VideoPlayer"
 import galeria from "../public/content/galeria.json"
 
 export default function SiTeLoPerdiste() {
-
     return (
         <Layout home>
             <Head>
