@@ -21,7 +21,7 @@ export default function Feria() {
       <div className="bg-conferenciafondo bg-cover bg-center min-h-screen w-full relative">
         <div className="w-full flex justify-center">
           <iframe
-            className="lg:mr-3 mt-44 xs:mt-25 sm:mt-25 md:mt-25 lg:mt-25"
+            className="lg:mr-3 mt-44 xs:mt-28 sm:mt-28 md:mt-28 lg:mt-28"
             id="vid_frame" src="https://www.facebook.com/plugins/video.php?height=314&amp;href=https%3A%2F%2Fwww.facebook.com%2Fcclambayeque%2Fvideos%2F560995758492718%2F&amp;show_text=false&amp;width=560&amp;t=0"
             width="100%"
             height="500"

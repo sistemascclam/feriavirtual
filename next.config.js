@@ -23,9 +23,9 @@
 
   const nextConfig = {
     images: {
-      domains: ['localhost','www.tailwindui.com','https://amazon-prod.djd2oct5zvemj.amplifyapp.com/'],
+      domains: ['localhost','www.tailwindui.com','https://amazon-prod.djd2oct5zvemj.amplifyapp.com/','www.feriabancaseguros.com'],
       loader: 'imgix',
-      path: 'https://amazon-prod.djd2oct5zvemj.amplifyapp.com/',
+      path: 'www.feriabancaseguros.com',
     },
     env: {
       NEXT_BK_WS:"https://cclam.org.pe/recursos.feriavirtual/public/api/"

@@ -16,7 +16,7 @@ module.exports = {
         'inicio': `url('/images/fondoinicio.png')`,
         'feria': `url('/images/feriafondotemp.png')`,
         'speakersbanner': `url('/images/speakersbanner.jpg')`,
-        'conferenciafondo': `url('/images/conferenciafondo.png')`,
+        'conferenciafondo': `url('/images/conferenciafondo.jpg')`,
       }),
       colors: {
         blackText: '#3E3E3E',
