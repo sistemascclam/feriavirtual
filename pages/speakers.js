@@ -21,7 +21,7 @@ export default function Speakers() {
             <Head>
                 <title>{siteTitle}</title>
             </Head>
-            <div className="min-h-screen bg-gray-100">
+            <div className="min-h-screen bg-gray-100 pb-10">
                 <div className="bg-speakersbanner bg-cover bg-bottom h-96 w-full flex flex-col text-center">
                     <h1 className="text-white text-xl font-bold mt-20">Conoce a nuestros</h1>
                     <h1 className="text-white text-6xl md:text-7xl font-bold">SPEAKERS</h1>
@@ -61,5 +61,5 @@ const CardSpeaker = ({ speaker }) =>
         </div>
         <p className="text-center mt-2 text-lg font-bold text-blackText">{speaker.name}</p>
         <p className="text-center leading-tight text-gray-600">{speaker.puesto}</p>
-        <p className="text-center leading-tight text-gray-500 font-bold">en {speaker.empresa}</p>
+        <p className="text-center leading-tight text-gray-500 font-bold">{speaker.empresa ? `en ${speaker.empresa}`:""}</p>
     </div>

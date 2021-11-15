@@ -1,72 +1,58 @@
 [
     {
-        "name": "Augusto Sorgi",
-        "empresa": "BBVA",
-        "puesto": "International Lead para España y Latinoamérica",
-        "telf": "51944674614",
-        "pic": "/images/speakers/speaker2.jpg"
-    },
-    {
-        "name": "Augusto Sorgi",
-        "empresa": "BBVA",
-        "puesto": "International Lead para España y Latinoamérica",
+        "name": "Mag. Alex Contreras Miranda",
+        "empresa": "",
+        "puesto": "Viceministro de Economía",
         "telf": "",
-        "pic": "/images/speakers/speaker2.jpg"
+        "pic": "/images/speakers/alexcontreras.jpeg"
     },
     {
-        "name": "Augusto Sorgi",
-        "empresa": "BBVA",
-        "puesto": "International Lead para España y Latinoamérica",
-        "telf": "51944674614",
-        "pic": "/images/speakers/speaker1.jpg"
-    },
-    {
-        "name": "Augusto Sorgi",
-        "empresa": "BBVA",
-        "puesto": "International Lead para España y Latinoamérica",
+        "name": "Mag. Juan Ricardo Gallo Pizarro",
+        "empresa": "Inandes Grupo Financiero",
+        "puesto": "CEO",
         "telf": "",
-        "pic": "/images/speakers/speaker2.jpg"
+        "pic": "/images/speakers/ricardogallo.jpg"
     },
     {
-        "name": "Augusto Sorgi",
-        "empresa": "BBVA",
-        "puesto": "International Lead para España y Latinoamérica",
+        "name": "Lic. Paul Ramírez Olazabal",
+        "empresa": "Crecer Seguros S.A.",
+        "puesto": "Jefe Comercial de Negocios",
         "telf": "",
-        "pic": "/images/speakers/speaker2.jpg"
+        "pic": "/images/speakers/paulramirez.jpg"
     },
     {
-        "name": "Augusto Sorgi",
-        "empresa": "BBVA",
-        "puesto": "International Lead para España y Latinoamérica",
+        "name": "Nicolás Messa",
+        "empresa": "Experian Perú",
+        "puesto": "Especialista de Preventas",
         "telf": "",
-        "pic": "/images/speakers/speaker1.jpg"
+        "pic": "/images/speakers/nicolasmessa.jpg"
     },
     {
-        "name": "Augusto Sorgi",
-        "empresa": "BBVA",
-        "puesto": "International Lead para España y Latinoamérica",
-        "telf": "51944674614",
-        "pic": "/images/speakers/speaker3.jpg"
+        "name": "Christopher Carlos Gaspar Nuñez Liza",
+        "empresa": "SAFEX - Casa de Camio Online",
+        "puesto": "CEO",
+        "telf":  "",
+        "pic": "/images/speakers/carlosgaspar.jpeg"
     },
     {
-        "name": "Augusto Sorgi",
-        "empresa": "BBVA",
-        "puesto": "International Lead para España y Latinoamérica",
+        "name": "Lic. Maggy Schon",
+        "empresa": "",
+        "puesto": "Creadora de Negocios Digitales",
         "telf": "",
-        "pic": "/images/speakers/speaker2.jpg"
+        "pic": "/images/speakers/maggyschon.jpeg"
     },
     {
-        "name": "Augusto Sorgi",
-        "empresa": "BBVA",
-        "puesto": "International Lead para España y Latinoamérica",
-        "telf": "51944674614",
-        "pic": "/images/speakers/speaker3.jpg"
+        "name": "Nicolás Messa",
+        "empresa": "CONSULTORA NORTE ASESORES & CORREDORES DE SEGUROS",
+        "puesto": "Gerente General",
+        "telf": "51978109990",
+        "pic": "/images/speakers/speaker.jpeg"
     },
     {
-        "name": "Augusto Sorgi",
-        "empresa": "BBVA",
-        "puesto": "International Lead para España y Latinoamérica",
-        "telf": "51944674614",
-        "pic": "/images/speakers/speaker1.jpg"
+        "name": "???????",
+        "empresa": "ACOSE PERÚ | FEDACSEP",
+        "puesto": "Presidente | Director de finanzas",
+        "telf": "",
+        "pic": "/images/speakers/unkown.jpeg"
     }
 ]

@@ -3,7 +3,7 @@ import { Fragment, useEffect, useState } from 'react'
 import { useForm } from "react-hook-form";
 
 import { useSelector, useDispatch } from 'react-redux'
-import {signup,signin,checkuser,resetcheck} from "../../redux/actions/auth"
+import { signup, signin, checkuser, resetcheck } from "../../redux/actions/auth"
 
 var timeOutFunc;
 export default function Login({ isOpen, closeModal, isPre }) {
@@ -14,30 +14,30 @@ export default function Login({ isOpen, closeModal, isPre }) {
 
     const onSubmit = (data) => {
         setdni("")
-        if(isPre){
+        if (isPre) {
             dispatch(signup(data));
-        }else{
+        } else {
             dispatch(signin(data));
         }
         closeModal();
     }
 
-    const handleDocTyped=(e)=>{
+    const handleDocTyped = (e) => {
         clearTimeout(timeOutFunc);
         setdni(e.target.value);
-        if(e.target.value){
+        if (e.target.value) {
             timeOutFunc = setTimeout(() => {
-              dispatch(checkuser({dni:e.target.value}));
+                dispatch(checkuser({ dni: e.target.value }));
             }, 500);
-        }else{
+        } else {
             dispatch(resetcheck());
         }
     }
 
     useEffect(() => {
-        reset({dni:dni});
-        if(userExists.user){
-            reset({...userExists.user,dni:userExists.user.username});
+        reset({ dni: dni });
+        if (userExists.user) {
+            reset({ ...userExists.user, dni: userExists.user.username });
         }
     }, [userExists])
 
@@ -166,32 +166,19 @@ export default function Login({ isOpen, closeModal, isPre }) {
                                             />
                                         </div>
                                     </div>
-                                    <div className="my-6 space-y-4">
-                                        <div className="flex items-start">
-                                            <div className="flex items-center h-5">
-                                                <input
-                                                    {...register("usodatos")}
-                                                    id="usodatos"
-                                                    name="usodatos"
-                                                    type="checkbox"
-                                                    className="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded"
-                                                />
-                                            </div>
-                                            <div className="ml-3 text-sm">
-                                                <label htmlFor="usodatos" className="text-gray-700">
-                                                    Autorizo el uso y procesamiento de mis datos personales.
-                                                </label>
-                                            </div>
-                                        </div>
+                                    <div className="my-6">
+                                        <p className="text-sm leading-tight">
+                                            Al registrarte, aceptas los <a href="http://localhost:3000/Terminos_y_condiciones_CCLAM.pdf" target="_blank" className="text-blue-700 hover:text-blue-900">Términos de servicio, políticas de privacidad y uso de Cookies</a>.
+                                        </p>
                                     </div>
                                 </div>
                                 <div className="mt-8">
                                     <button
                                         type="submit"
                                         className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-full text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-                                        
+
                                     >
-                                        {isPre ? 'Registrarme':'Ingresar'}
+                                        {isPre ? 'Registrarme' : 'Ingresar'}
                                     </button>
                                 </div>
                             </form>

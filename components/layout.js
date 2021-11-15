@@ -11,6 +11,7 @@ export const siteDescription = 'Del 18 al 19 de noviembre, ingresa a la I Feria 
 // export const siteImage = 'https://cclam.org.pe/feriavirtual/images/post.png'
 export const siteURL = 'www.feriabancaseguros.com/'
 export const siteImage = 'www.feriabancaseguros.com/images/post.png'
+
 export default function Layout({ children }) {
   const { token } = useSelector(({ auth }) => auth);
   const dispatch = useDispatch();

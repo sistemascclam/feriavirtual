@@ -4,10 +4,16 @@ import Link from 'next/link'
 import ReverseTimer from '../ReverseTimer';
 import Login from "../Modals/Login";
 import { useSelector } from 'react-redux';
+import Entrada from '../Transitions/Entrada';
 
 export default function Started({ handleEndEvent, final }) {
     const [isOpen, setIsOpen] = useState(false)
     const { authUser, token } = useSelector(({ auth }) => auth);
+    const [startTransition, setstartTransition] = useState(false);
+
+    const onEndTransition = () => {
+
+    }
 
     return (
         <div className="w-full min-h-screen relative">
@@ -42,14 +48,20 @@ export default function Started({ handleEndEvent, final }) {
             {
                 token ?
                     <>
-                        <Link href={`/presentacion`}>
+                        <button onClick={() => setstartTransition(true)} className="w-max animate-bounce mt-44 mx-auto flex py-2 px-4 font-semibold rounded-full shadow-md text-white bg-blue-600 hover:bg-blue-700">
+                            Ingresar
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                            </svg>
+                        </button>
+                        {/* <Link href={`/presentacion`}>
                             <a className="w-max animate-bounce mt-44 mx-auto flex py-2 px-4 font-semibold rounded-full shadow-md text-white bg-blue-600 hover:bg-blue-700">
                                 Ingresar
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                 </svg>
                             </a>
-                        </Link>
+                        </Link> */}
                     </>
                     :
                     <button onClick={() => setIsOpen(true)} className="w-max animate-bounce mt-44 mx-auto flex py-2 px-4 font-semibold rounded-full shadow-md text-white bg-blue-600 hover:bg-blue-700">
@@ -59,10 +71,17 @@ export default function Started({ handleEndEvent, final }) {
                         </svg>
                     </button>
             }
-            <div className="absolute bottom-5 inset-x-0 lg:inset-x-auto lg:left-5 text-white text-center text-sm">
+            <div className="absolute bottom-5 inset-x-0 lg:top-5 lg:inset-x-auto lg:left-5 text-white text-center text-sm">
                 Terminamos en
                 <ReverseTimer handleAction={handleEndEvent} dateCompate={final} small={true} />
             </div>
+            {
+                startTransition &&
+                <Entrada
+                newRoute={"feria"}
+                videroUrl={"/videos/trantitions/pruebatransicion.mp4"}
+                onEndTransition={onEndTransition} />
+            }
         </div>
     )
 }
