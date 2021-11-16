@@ -168,7 +168,7 @@ export default function Login({ isOpen, closeModal, isPre }) {
                                     </div>
                                     <div className="my-6">
                                         <p className="text-sm leading-tight">
-                                            Al registrarte, aceptas los <a href="http://localhost:3000/Terminos_y_condiciones_CCLAM.pdf" target="_blank" className="text-blue-700 hover:text-blue-900">Términos de servicio, políticas de privacidad y uso de Cookies</a>.
+                                            Al registrarte, aceptas los <a href="https://www.feriabancaseguros.com/Terminos_y_condiciones_CCLAM.pdf" target="_blank" className="text-blue-700 hover:text-blue-900">Términos de servicio, políticas de privacidad y uso de Cookies</a>.
                                         </p>
                                     </div>
                                 </div>

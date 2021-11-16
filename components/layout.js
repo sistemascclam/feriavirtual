@@ -9,8 +9,8 @@ export const siteTitle = 'I Feria Virtual Bicentenario BANSEGURO 2021 - Regístr
 export const siteDescription = 'Del 18 al 19 de noviembre, ingresa a la I Feria virtual de banca y seguros 2021. | Cámara de Comercio y Producción de Lambayeque'
 // export const siteURL = 'https://cclam.org.pe/feriavirtual/'
 // export const siteImage = 'https://cclam.org.pe/feriavirtual/images/post.png'
-export const siteURL = 'www.feriabancaseguros.com/'
-export const siteImage = 'www.feriabancaseguros.com/images/post.png'
+export const siteURL = 'https://www.feriabancaseguros.com/'
+export const siteImage = 'https://www.feriabancaseguros.com/images/post.png'
 
 export default function Layout({ children }) {
   const { token } = useSelector(({ auth }) => auth);

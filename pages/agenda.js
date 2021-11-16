@@ -25,10 +25,10 @@ export default function Agenda() {
                     <h1 className="text-white text-xl font-bold mt-20">Conoce nuestra</h1>
                     <h1 className="text-white text-6xl md:text-7xl font-bold">AGENDA</h1>
                 </div>
-                <div className="w-full -mt-44 md:-mt-32 flex flex-wrap justify-evenly">
+                <div className="w-full -mt-44 md:-mt-40 flex flex-wrap lg:flex-nowrap">
                     {
                         agenda.map((s, k) =>
-                            <CardEvento key={k} evento={s} />
+                            <SectionDay key={k} dia={s} />
                         )
                     }
                 </div>
@@ -37,24 +37,37 @@ export default function Agenda() {
     )
 }
 
-const CardEvento = ({ evento }) =>
-    <div className="w-96 rounded-xl m-6 hover:scale-101 bg-white shadow-xl px-8 py-6 select-auto">
-        <div className="  text-blackText flex flex-col justify-center rounded-xl">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor">
+const SectionDay = ({ dia }) =>
+    <div className="bg-white w-full m-4 py-8 px-4 rounded-2xl">
+        <div className="text-blue-600 font-bold text-center flex w-max mx-auto text-xl">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 my-auto mr-2 " viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
             </svg>
-            <p className="text-sm mt-1">{evento.horario}</p>
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-indigo-600 mt-3" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z" clipRule="evenodd" />
-            </svg>
-            <p className="text-xl leading-none font-bold mt-1">{evento.title}</p>
-            {evento.speaker &&
-                <>
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-indigo-600 mt-3" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                    </svg>
-                    <p className="text-sm mt-1">{evento.speaker}</p>
-                </>
+            {dia.dia}
+        </div>
+        <div className="flex flex-col py-8">
+            {
+                dia.eventos.map((s, k) =>
+                    <CardEvento key={k} evento={s} last={k === dia.eventos.length - 1} />
+                )
             }
+        </div>
+    </div>
+
+const CardEvento = ({ evento, last }) =>
+    <div className="flex">
+        <div className="py-1 px-2">
+            <div className="bg-blue-600 w-4 h-4 shadow-xl rounded-full"></div>
+            {
+                !last &&
+                <div className="bg-blue-600 -mt-1 mx-auto w-1 h-full rounded-full"></div>
+            }
+        </div>
+        <div className="text-gray-700 flex flex-col justify-center rounded-xl content-center pb-10 px-8">
+            <p className="text-base leading-none font-bold mt-1">{evento.title}</p>
+            {evento.speaker &&
+                <p className="text-base leading-tight mt-2">por {evento.speaker}</p>
+            }
+            <i className="text-base leading-tight mt-1">{evento.horario}</i>
         </div>
     </div>

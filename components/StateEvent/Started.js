@@ -5,6 +5,7 @@ import ReverseTimer from '../ReverseTimer';
 import Login from "../Modals/Login";
 import { useSelector } from 'react-redux';
 import Entrada from '../Transitions/Entrada';
+import { motion } from "framer-motion"
 
 export default function Started({ handleEndEvent, final }) {
     const [isOpen, setIsOpen] = useState(false)
@@ -77,10 +78,17 @@ export default function Started({ handleEndEvent, final }) {
             </div>
             {
                 startTransition &&
+                <motion.div 
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                    exit={{ opacity: 0 }}
+                >
                 <Entrada
                 newRoute={"feria"}
                 videroUrl={"/videos/trantitions/pruebatransicion.mp4"}
                 onEndTransition={onEndTransition} />
+                </motion.div >
             }
         </div>
     )

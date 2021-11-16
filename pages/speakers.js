@@ -49,6 +49,7 @@ const CardSpeaker = ({ speaker }) =>
                 width={40}
                 layout="responsive"
                 objectFit="cover"
+                objectPosition="top"
             />
             {
                 speaker.telf ?
