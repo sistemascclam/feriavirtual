@@ -3,11 +3,11 @@
  */
 
 
- const nextConfig = {
-    env: {
-      NEXT_BK_WS:"http://localhost:8000/api/"
-    },
-  }
+//  const nextConfig = {
+//     env: {
+//       NEXT_BK_WS:"http://localhost:8000/api/"
+//     },
+//   }
 
 //  const nextConfig = {
 //     basePath: '/feriaprueba',
