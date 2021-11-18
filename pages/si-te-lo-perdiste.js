@@ -32,13 +32,13 @@ export default function SiTeLoPerdiste() {
                         quality="100"
                     />
                 </div>
-                <div className="bg-speakersbanner bg-cover bg-top h-80 w-full flex flex-col text-center">
+                <div className="bg-speakersbanner bg-cover bg-left-top h-80 w-full flex flex-col text-center">
                     <h1 className="text-white text-xl font-bold mt-14">Si te lo perdiste...</h1>
                     <h1 className="text-white text-6xl md:text-7xl font-bold">GALERIA</h1>
                 </div>
                 <div className="w-full -mt-44 md:-mt-32 flex flex-wrap justify-center">
                     {
-                        siteloperdisteList.length===0 ? <p className="text-white text-xl text-opacity-80 rounded-full">Vuelve pronto para ver las grabaciones...</p> : ""
+                        siteloperdisteList.length===0 ? <p className="text-white text-xl text-center text-opacity-80 rounded-full">Vuelve pronto para ver las grabaciones...</p> : ""
                     }
                     {
                         siteloperdisteList.map((s, k) =>

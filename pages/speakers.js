@@ -34,7 +34,7 @@ export default function Speakers() {
                         quality="100"
                     />
                 </div>
-                <div className="bg-speakersbanner bg-cover bg-top h-80 w-full flex flex-col text-center">
+                <div className="bg-speakersbanner bg-cover bg-left-top h-80 w-full flex flex-col text-center">
                     <h1 className="text-white text-xl font-bold mt-14">Conoce a nuestros</h1>
                     <h1 className="text-white text-6xl md:text-7xl font-bold">SPEAKERS</h1>
                 </div>
