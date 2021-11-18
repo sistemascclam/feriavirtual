@@ -1,9 +1,11 @@
 import Head from 'next/head'
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
 import { setLocalStorageAuth } from "../redux/actions/auth"
 import LogoutButton from "./Floatings/Logout"
 import Explore from "./Floatings/Explore"
+import TransitionVideo from "./TransitionVideo"
+import { motion } from "framer-motion"
 
 export const siteTitle = 'I Feria Virtual Bicentenario BANSEGURO 2021 - Regístrate gratis'
 export const siteDescription = 'Del 18 al 19 de noviembre, ingresa a la I Feria virtual de banca y seguros 2021. | Cámara de Comercio y Producción de Lambayeque'
@@ -15,10 +17,17 @@ export const siteImage = 'https://www.feriabancaseguros.com/images/post.png'
 export default function Layout({ children }) {
   const { token } = useSelector(({ auth }) => auth);
   const dispatch = useDispatch();
+  const [startTransition, setstartTransition] = useState(false);
+  const [nextRoute, setnextRoute] = useState(null);
 
   useEffect(() => {
     dispatch(setLocalStorageAuth());
   }, [])
+
+  const handleChangeRoute=(newRoute)=>{
+    setnextRoute(newRoute)
+    setstartTransition(true)
+  }
 
   return (
     <>
@@ -44,17 +53,31 @@ export default function Layout({ children }) {
         <meta name="keywords" content="Feria virtual, Bancos, seguros, feria, cclam" />
 
       </Head>
-      <main className="bg-themeWhite font-poppins">
+      <main className="bg-themeWhite font-poppins relative">
         {
           token ?
             <>
-              <Explore />
+              <Explore changeRoute={handleChangeRoute}  />
               <LogoutButton />
             </>
             :
             ""
         }
         {children}
+        {
+            startTransition &&
+            <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                exit={{ opacity: 0 }}
+            >
+            <TransitionVideo
+              handleEnd={()=>setstartTransition(false)}
+              newRoute={nextRoute}
+              videroUrl={`/videos/trantitions/${nextRoute}.mp4`} />
+            </motion.div >
+        }
       </main>
     </>
   )

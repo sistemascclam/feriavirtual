@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Layout, { siteTitle } from "../components/layout";
 import { useEffect } from 'react';
 import { useRouter } from "next/router";
+import Image from 'next/image'
 
 import agenda from "../public/content/agenda.json"
 
@@ -21,11 +22,23 @@ export default function Agenda() {
                 <title>{siteTitle}</title>
             </Head>
             <div className="min-h-screen bg-gray-100 pb-10">
-                <div className="bg-speakersbanner bg-cover bg-bottom h-96 w-full flex flex-col text-center">
-                    <h1 className="text-white text-xl font-bold mt-20">Conoce nuestra</h1>
+                <div className="absolute top-3 left-3">
+                    <Image
+                        className="rounded-xl"
+                        priority
+                        alt="Logo CCLAM"
+                        src="/images/logobancayseguros.jpeg"
+                        height={100}
+                        width={250}
+                        objectFit="cover"
+                        quality="100"
+                    />
+                </div>
+                <div className="bg-speakersbanner bg-cover bg-top h-80 w-full flex flex-col text-center">
+                    <h1 className="text-white text-xl font-bold mt-14">Conoce nuestra</h1>
                     <h1 className="text-white text-6xl md:text-7xl font-bold">AGENDA</h1>
                 </div>
-                <div className="w-full -mt-44 md:-mt-40 flex flex-wrap lg:flex-nowrap">
+                <div className="w-full -mt-44 md:-mt-32 flex flex-wrap lg:flex-nowrap">
                     {
                         agenda.map((s, k) =>
                             <SectionDay key={k} dia={s} />
@@ -38,7 +51,7 @@ export default function Agenda() {
 }
 
 const SectionDay = ({ dia }) =>
-    <div className="bg-white w-full m-4 py-8 px-4 rounded-2xl">
+    <div className="bg-white w-full m-4 py-8 px-4 rounded-2xl shadow-xl">
         <div className="text-blue-600 font-bold text-center flex w-max mx-auto text-xl">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 my-auto mr-2 " viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />

@@ -10,14 +10,14 @@
 //   }
 
 //  const nextConfig = {
-//     basePath: '/feriavirtual',
+//     basePath: '/feriaprueba',
 //     images: {
 //       domains: ['www.cclam.org.pe', 'localhost','www.tailwindui.com'],
 //       loader: 'imgix',
-//       path: 'https://cclam.org.pe/feriavirtual',
+//       path: 'https://cclam.org.pe/feriaprueba',
 //     },
 //     env: {
-//       NEXT_BK_WS:"https://cclam.org.pe/recursos.feriavirtual/public/api/"
+//       NEXT_BK_WS:"https://cclam.org.pe/recursos.feriaprueba/public/api/"
 //     },
 //   }
 

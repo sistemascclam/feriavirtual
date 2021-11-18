@@ -38,7 +38,7 @@ export default function index() {
 
     return (
         <AnimatePresence>
-            <motion.div className="bg-inicio bg-cover bg-center min-h-screen w-full"
+            <motion.div className="bg-inicio bg-cover bg-bottom min-h-screen w-full"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0, scale:1.5 }}

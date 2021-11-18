@@ -3,56 +3,102 @@
         "name": "Mag. Alex Contreras Miranda",
         "empresa": "",
         "puesto": "Viceministro de Economía",
-        "telf": "",
         "pic": "/images/speakers/alexcontreras.jpeg"
     },
     {
         "name": "Mag. Juan Ricardo Gallo Pizarro",
         "empresa": "Inandes Grupo Financiero",
         "puesto": "CEO",
-        "telf": "",
         "pic": "/images/speakers/ricardogallo.jpg"
     },
     {
         "name": "Lic. Paul Ramírez Olazabal",
         "empresa": "Crecer Seguros S.A.",
         "puesto": "Jefe Comercial de Negocios",
-        "telf": "",
         "pic": "/images/speakers/paulramirez.jpg"
     },
     {
         "name": "Nicolás Messa",
         "empresa": "Experian Perú",
         "puesto": "Especialista de Preventas",
-        "telf": "",
         "pic": "/images/speakers/nicolasmessa.jpg"
-    },
-    {
-        "name": "Christopher Carlos Gaspar Nuñez Liza",
-        "empresa": "SAFEX - Casa de Camio Online",
-        "puesto": "CEO",
-        "telf":  "",
-        "pic": "/images/speakers/carlosgaspar.jpeg"
     },
     {
         "name": "Lic. Maggy Schon",
         "empresa": "",
         "puesto": "Creadora de Negocios Digitales",
-        "telf": "",
         "pic": "/images/speakers/maggyschon.jpeg"
     },
     {
-        "name": "Nicolás Messa",
-        "empresa": "CONSULTORA NORTE ASESORES & CORREDORES DE SEGUROS",
-        "puesto": "Gerente General",
-        "telf": "51978109990",
-        "pic": "/images/speakers/speaker.jpeg"
+        "name":"Carlos Hernández",
+        "empresa": "Insights",
+        "puesto": "Analista de Insights & Estrategia en Consumer Truth",
+        "pic": "/images/speakers/carloshernandez.jpg"
     },
     {
-        "name": "???????",
+        "name": "Dra. Rosse Esparza Huamanchumo",
+        "empresa": "USIL",
+        "puesto": "Docente Investigadora Facultad Administración Hotelera, Turismo y Gastronomía",
+        "pic": "/images/speakers/rosseesparza.jpeg"
+    },
+    {
+        "name": "Pablo Fernández",
+        "empresa": "CONSULTORA NORTE ASESORES & CORREDORES DE SEGUROS",
+        "puesto": "Gerente General",
+        "pic": "/images/speakers/pablofernandez.jpg"
+    },
+    {
+        "name": "Benjamín Falla Arnao",
+        "empresa": "BFBS Brand Studio",
+        "puesto": "Consultoría en Estrategia y Gestión de Marcas",
+        "pic": "/images/speakers/benjaminfalla.jpeg"
+    },
+    {
+        "name": "Alvaro Jara Vilchez",
+        "empresa": "",
+        "puesto": "Profesional en Ciencias Filosóficas / Master Coach PNL / CEO Centro de Investigación DAR",
+        "pic": "/images/speakers/alvarovilchez.jpg"
+    },
+    {
+        "name": "Iván Alva",
         "empresa": "ACOSE PERÚ | FEDACSEP",
         "puesto": "Presidente | Director de finanzas",
-        "telf": "",
+        "pic": "/images/speakers/ivanalva.jpeg"
+    },
+    {
+        "name": "Jesús Esquerre",
+        "empresa": "ACLS CORREDORES",
+        "puesto": "Gerente Técnico",
         "pic": "/images/speakers/unkown.jpeg"
+    },
+    {
+        "name": "Iván Alva",
+        "empresa": "ACOSE PERÚ | FEDACSEP",
+        "puesto": "Presidente | Director de finanzas",
+        "pic": "/images/speakers/ivanalva.jpeg"
+    },
+    {
+        "name": "Eduard Montoya Altamirano",
+        "empresa": "CONSORCIO TURISTICO NBJ S.A.C.",
+        "puesto": "Gerente General",
+        "pic": "/images/speakers/eduardomontoya.jpeg"
+    },
+    {
+        "name": "Christopher Carlos Gaspar Nuñez Liza",
+        "empresa": "SAFEX - Casa de Camio Online",
+        "puesto": "CEO",
+        "pic": "/images/speakers/carlosgaspar.jpeg"
+    },
+    {
+        "name": "César Icochea Valdivia",
+        "empresa": "",
+        "puesto": "Gestor de riesgos",
+        "pic": "/images/speakers/cesaricochea.png"
+    },
+    {
+        "name": "Paul Alfonso Huananbal Mimbela",
+        "empresa": "Caña blanca",
+        "puesto": "Gerente Comercial",
+        "pic": "/images/speakers/paulHuananbal.jpeg"
     }
 ]
