@@ -75,7 +75,7 @@ export default function Layout({ children }) {
             <TransitionVideo
               handleEnd={()=>setstartTransition(false)}
               newRoute={nextRoute}
-              videroUrl={`/videos/trantitions/${nextRoute}.mp4`} />
+              videroUrl={`/videos/trantitions${nextRoute}.mp4`} />
             </motion.div >
         }
       </main>
