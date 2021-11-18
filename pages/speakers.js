@@ -22,7 +22,7 @@ export default function Speakers() {
                 <title>{siteTitle}</title>
             </Head>
             <div className="min-h-screen bg-gray-100 pb-10">
-                <div className="absolute top-3 left-3">
+                <div className="absolute top-3 left-3 hidden lg:block">
                     <Image
                     className="rounded-xl"
                         priority

@@ -35,15 +35,15 @@ export default function Feria() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0, scale: 1.5 }}
         >
-        {
-          codconferencia ?
-          <motion.div className="w-full flex justify-center"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0, scale: 1.5 }}
-          transition={{
-            opacity: { duration: 1 }
-          }}>
+          {
+            codconferencia ?
+              <motion.div className="w-full flex justify-center"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0, scale: 1.5 }}
+                transition={{
+                  opacity: { duration: 1 }
+                }}>
                 <iframe
                   className="lg:ml-3 mt-44 xs:mt-16 sm:mt-16 md:mt-16 lg:mt-16"
                   id="vid_frame" src={`https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fcclambayeque%2Fvideos%2F${codconferencia}%2F&show_text=false&width=560&t=0`}
@@ -51,10 +51,12 @@ export default function Feria() {
                   height="500"
                   style={{ border: "none", overflow: "hidden", width: "715px" }}
                   allowFullScreen={true} title=""></iframe>
-          </motion.div>
-                :
-                ""
-            }
+              </motion.div>
+              :
+              <div className="w-full text-center pt-52">
+                <p className="text-black text-lg text-opacity-50 leading-tight rounded-full">Vuelve pronto por nuestras conferencias</p>
+              </div>
+          }
         </motion.div>
       </AnimatePresence>
     </Layout>

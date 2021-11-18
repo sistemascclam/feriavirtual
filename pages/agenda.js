@@ -22,16 +22,15 @@ export default function Agenda() {
                 <title>{siteTitle}</title>
             </Head>
             <div className="min-h-screen bg-gray-100 pb-10">
-                <div className="absolute top-3 left-3">
+                <div className="absolute top-3 left-3 hidden lg:block">
                     <Image
                         className="rounded-xl"
                         priority
-                        alt="Logo CCLAM"
+                        alt="Logo COMITE BANCA"
                         src="/images/logobancayseguros.jpeg"
                         height={100}
                         width={250}
                         objectFit="cover"
-                        quality="100"
                     />
                 </div>
                 <div className="bg-speakersbanner bg-cover bg-top h-80 w-full flex flex-col text-center">

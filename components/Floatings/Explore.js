@@ -65,7 +65,7 @@ var links = [
 export default function Explore({ changeRoute }) {
     const router = useRouter()
     const handleExplore = (newRoute) => {
-        window.scrollTo(0,0)
+        window.scrollTo(0, 0)
         changeRoute(newRoute);
     }
     return (
@@ -121,68 +121,99 @@ export default function Explore({ changeRoute }) {
                     </div>
                 )
             }
-            <div className="block lg:hidden">
-                <Disclosure as="nav">
-                    {({ open }) => (
-                        <>
-                            <Menu as="div" className="ml-3 relative pt-3">
-                                <div>
-                                    <Menu.Button title="Explorar" className="bg-white text-blue-600 shadow-lg p-2 flex text-sm rounded-full hover:bg-gray-100">
-                                        <div >
-                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
-                                                <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                                            </svg>
+            {
+                router.asPath !== "/entrada" ?
+                    <div className="block lg:hidden">
+                        <Disclosure as="nav">
+                            {({ open }) => (
+                                <>
+                                    <Menu as="div" className="ml-3 relative pt-3">
+                                        <div>
+                                            <Menu.Button title="Explorar" className="bg-white text-blue-600 shadow-lg p-2 flex text-sm rounded-full hover:bg-gray-100">
+                                                <div >
+                                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
+                                                        <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                                                    </svg>
+                                                </div>
+                                            </Menu.Button>
                                         </div>
-                                    </Menu.Button>
-                                </div>
-                                <Transition
-                                    as={Fragment}
-                                    enter="transition ease-out duration-100"
-                                    enterFrom="transform opacity-0 scale-95"
-                                    enterTo="transform opacity-100 scale-100"
-                                    leave="transition ease-in duration-75"
-                                    leaveFrom="transform opacity-100 scale-100"
-                                    leaveTo="transform opacity-0 scale-95"
-                                >
-                                    <Menu.Items className="origin-top-right absolute left-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white bg-opacity-80 ring-1 ring-black ring-opacity-5 focus:outline-none">
-                                            {
-                                                links.map((l, i) =>
-                                                    l.hasVideo ?
-                                                        <Menu.Item key={i} >
-                                                            {({ active }) => (
-                                                                <button onClick={() => handleExplore(l.route)} className={`w-full ${router.asPath === l.route ? "bg-blue-300" : "hover:bg-gray-100"} flex px-4 py-2 text-sm text-gray-700`}
-                                                                >
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 my-auto mr-2 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
-                                                                        <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
-                                                                    </svg>
-                                                                    {l.title}
-                                                                </button>
-                                                            )}
-                                                        </Menu.Item>
-                                                        :
-                                                        <Menu.Item key={i} >
-                                                            {({ active }) => (
-                                                                <Link href={l.route}>
-                                                                    <a
-                                                                        className={`w-full ${router.asPath === l.route ? "bg-blue-300" : "hover:bg-gray-100"} flex px-4 py-2 text-sm text-gray-700`}
+                                        <Transition
+                                            as={Fragment}
+                                            enter="transition ease-out duration-100"
+                                            enterFrom="transform opacity-0 scale-95"
+                                            enterTo="transform opacity-100 scale-100"
+                                            leave="transition ease-in duration-75"
+                                            leaveFrom="transform opacity-100 scale-100"
+                                            leaveTo="transform opacity-0 scale-95"
+                                        >
+                                            <Menu.Items className="origin-top-right absolute left-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white bg-opacity-80 ring-1 ring-black ring-opacity-5 focus:outline-none">
+                                                {
+                                                    links.map((l, i) =>
+                                                        l.hasVideo ?
+                                                            <Menu.Item key={i} >
+                                                                {({ active }) => (
+                                                                    <button onClick={() => handleExplore(l.route)} className={`w-full ${router.asPath === l.route ? "bg-blue-300" : "hover:bg-gray-100"} flex px-4 py-2 text-sm text-gray-700`}
                                                                     >
                                                                         <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 my-auto mr-2 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
                                                                             <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
                                                                         </svg>
                                                                         {l.title}
-                                                                    </a>
-                                                                </Link>
-                                                            )}
-                                                        </Menu.Item>
-                                                )
-                                            }
-                                    </Menu.Items>
-                                </Transition>
-                            </Menu>
-                        </>
-                    )}
-                </Disclosure>
-            </div>
-        </div>
+                                                                    </button>
+                                                                )}
+                                                            </Menu.Item>
+                                                            :
+                                                            <Menu.Item key={i} >
+                                                                {({ active }) => (
+                                                                    <Link href={l.route}>
+                                                                        <a
+                                                                            className={`w-full ${router.asPath === l.route ? "bg-blue-300" : "hover:bg-gray-100"} flex px-4 py-2 text-sm text-gray-700`}
+                                                                        >
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 my-auto mr-2 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
+                                                                                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                                                                            </svg>
+                                                                            {l.title}
+                                                                        </a>
+                                                                    </Link>
+                                                                )}
+                                                            </Menu.Item>
+                                                    )
+                                                }
+                                            </Menu.Items>
+                                        </Transition>
+                                    </Menu>
+                                </>
+                            )}
+                        </Disclosure>
+                    </div>
+                    :
+                    <div className="block lg:hidden">
+                        <div className="origin-top-right absolute left-0 mt-2 ml-2 w-48 rounded-md shadow-lg py-1 bg-white bg-opacity-80 ring-1 ring-black ring-opacity-5 focus:outline-none">
+                            {
+                                links.map((l, i) =>
+                                    l.hasVideo ?
+                                        <button key={i} onClick={() => handleExplore(l.route)} className={`w-full ${router.asPath === l.route ? "bg-blue-300" : "hover:bg-gray-100"} flex px-4 py-2 text-sm text-gray-700`}
+                                        >
+                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 my-auto mr-2 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
+                                                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                                            </svg>
+                                            {l.title}
+                                        </button>
+                                        :
+                                        <Link key={i} href={l.route}>
+                                            <a
+                                                className={`w-full ${router.asPath === l.route ? "bg-blue-300" : "hover:bg-gray-100"} flex px-4 py-2 text-sm text-gray-700`}
+                                            >
+                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 my-auto mr-2 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
+                                                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                                                </svg>
+                                                {l.title}
+                                            </a>
+                                        </Link>
+                                )
+                            }
+                        </div>
+                    </div>
+            }
+        </div >
     )
 }
