@@ -154,9 +154,7 @@ export default function Explore({ changeRoute }) {
                                                                 {({ active }) => (
                                                                     <button onClick={() => handleExplore(l.route)} className={`w-full ${router.asPath === l.route ? "bg-blue-300" : "hover:bg-gray-100"} flex px-4 py-2 text-sm text-gray-700`}
                                                                     >
-                                                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 my-auto mr-2 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
-                                                                            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
-                                                                        </svg>
+                                                                        {l.icon}
                                                                         {l.title}
                                                                     </button>
                                                                 )}
@@ -168,9 +166,7 @@ export default function Explore({ changeRoute }) {
                                                                         <a
                                                                             className={`w-full ${router.asPath === l.route ? "bg-blue-300" : "hover:bg-gray-100"} flex px-4 py-2 text-sm text-gray-700`}
                                                                         >
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 my-auto mr-2 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
-                                                                                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
-                                                                            </svg>
+                                                                            {l.icon}
                                                                             {l.title}
                                                                         </a>
                                                                     </Link>
@@ -193,9 +189,7 @@ export default function Explore({ changeRoute }) {
                                     l.hasVideo ?
                                         <button key={i} onClick={() => handleExplore(l.route)} className={`w-full ${router.asPath === l.route ? "bg-blue-300" : "hover:bg-gray-100"} flex px-4 py-2 text-sm text-gray-700`}
                                         >
-                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 my-auto mr-2 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
-                                                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
-                                            </svg>
+                                            {l.icon}
                                             {l.title}
                                         </button>
                                         :
@@ -203,9 +197,7 @@ export default function Explore({ changeRoute }) {
                                             <a
                                                 className={`w-full ${router.asPath === l.route ? "bg-blue-300" : "hover:bg-gray-100"} flex px-4 py-2 text-sm text-gray-700`}
                                             >
-                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 my-auto mr-2 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
-                                                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
-                                                </svg>
+                                                {l.icon}
                                                 {l.title}
                                             </a>
                                         </Link>
