@@ -103,7 +103,9 @@ export default function Explore({ changeRoute }) {
                                     <button key={i} onClick={() => handleExplore(l.route)}
                                         className={`flex justify-center px-4 py-2 text-md font-light bg-blue-800 bg-opacity-30 hover:bg-opacity-90 hover:scale-101 shadow-xl text-gray-100 rounded-full mb-4`}
                                     >
-                                        {l.icon}
+                                        <span className="text-blue-600">
+                                            {l.icon}
+                                        </span>
                                         {l.title}
                                     </button>
                                     :
@@ -154,7 +156,9 @@ export default function Explore({ changeRoute }) {
                                                                 {({ active }) => (
                                                                     <button onClick={() => handleExplore(l.route)} className={`w-full ${router.asPath === l.route ? "bg-blue-300" : "hover:bg-gray-100"} flex px-4 py-2 text-sm text-gray-700`}
                                                                     >
+                                                                    <span className="text-blue-700">
                                                                         {l.icon}
+                                                                    </span>
                                                                         {l.title}
                                                                     </button>
                                                                 )}
@@ -166,7 +170,9 @@ export default function Explore({ changeRoute }) {
                                                                         <a
                                                                             className={`w-full ${router.asPath === l.route ? "bg-blue-300" : "hover:bg-gray-100"} flex px-4 py-2 text-sm text-gray-700`}
                                                                         >
+                                                                        <span className="text-blue-700">
                                                                             {l.icon}
+                                                                        </span>
                                                                             {l.title}
                                                                         </a>
                                                                     </Link>
@@ -189,7 +195,9 @@ export default function Explore({ changeRoute }) {
                                     l.hasVideo ?
                                         <button key={i} onClick={() => handleExplore(l.route)} className={`w-full ${router.asPath === l.route ? "bg-blue-300" : "hover:bg-gray-100"} flex px-4 py-2 text-sm text-gray-700`}
                                         >
+                                        <span className="text-blue-700">
                                             {l.icon}
+                                        </span>
                                             {l.title}
                                         </button>
                                         :
@@ -197,7 +205,9 @@ export default function Explore({ changeRoute }) {
                                             <a
                                                 className={`w-full ${router.asPath === l.route ? "bg-blue-300" : "hover:bg-gray-100"} flex px-4 py-2 text-sm text-gray-700`}
                                             >
+                                            <span className="text-blue-700">
                                                 {l.icon}
+                                            </span>
                                                 {l.title}
                                             </a>
                                         </Link>
