@@ -77,7 +77,8 @@ const CardVideo = ({ evento }) => {
                 }
             </div>
             <div className="pt-1 pb-5 px-5  text-blackText bg-white rounded-xl">
-                <p className="font-bold mt-2 text-lg leading-tight">{evento.title} <span className="text-sm font-normal"> - {evento.speaker}</span></p>
+                <p className="font-bold mt-2 text-lg leading-tight">{evento.title} <span className="text-sm font-normal">{evento.speaker ? `- ${evento.speaker}` : ''}</span></p>
+                <p className="mt-1 text-sm leading-tight">{evento.description}</p>
                 <p className="text-sm mt-2 text-gray-500">{moment(evento.datetime).format("lll")}</p>
             </div>
         </div>
