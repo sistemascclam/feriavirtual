@@ -103,9 +103,7 @@ export default function Explore({ changeRoute }) {
                                     <button key={i} onClick={() => handleExplore(l.route)}
                                         className={`flex justify-center px-4 py-2 text-md font-light bg-blue-800 bg-opacity-30 hover:bg-opacity-90 hover:scale-101 shadow-xl text-gray-100 rounded-full mb-4`}
                                     >
-                                        <span className="text-blue-600">
                                             {l.icon}
-                                        </span>
                                         {l.title}
                                     </button>
                                     :
@@ -189,25 +187,21 @@ export default function Explore({ changeRoute }) {
                     </div>
                     :
                     <div className="block lg:hidden">
-                        <div className="origin-top-right absolute left-0 mt-2 ml-2 w-48 rounded-md shadow-lg py-1 bg-white bg-opacity-80 ring-1 ring-black ring-opacity-5 focus:outline-none">
+                        <div className="origin-top-right relative left-1/2 mt-10 w-48 py-1 ">
                             {
-                                links.map((l, i) =>
+                                links.filter(a=>a.route!=="/entrada").map((l, i) =>
                                     l.hasVideo ?
-                                        <button key={i} onClick={() => handleExplore(l.route)} className={`w-full ${router.asPath === l.route ? "bg-blue-300" : "hover:bg-gray-100"} flex px-4 py-2 text-sm text-gray-700`}
+                                        <button key={i} onClick={() => handleExplore(l.route)} className={`w-full ${router.asPath === l.route ? "bg-blue-300" : "hover:bg-opacity-80"} flex justify-center px-4 py-2 text-sm text-white rounded-full mb-3 bg-blue-800 shadow-xl bg-opacity-70 hover:bg-opacity-90`}
                                         >
-                                        <span className="text-blue-700">
                                             {l.icon}
-                                        </span>
                                             {l.title}
                                         </button>
                                         :
                                         <Link key={i} href={l.route}>
                                             <a
-                                                className={`w-full ${router.asPath === l.route ? "bg-blue-300" : "hover:bg-gray-100"} flex px-4 py-2 text-sm text-gray-700`}
+                                                className={`w-full ${router.asPath === l.route ? "bg-blue-300" : "hover:bg-opacity-80"} flex justify-center px-4 py-2 text-sm text-white rounded-full mb-3 bg-blue-800 shadow-xl bg-opacity-70 hover:bg-opacity-90`}
                                             >
-                                            <span className="text-blue-700">
                                                 {l.icon}
-                                            </span>
                                                 {l.title}
                                             </a>
                                         </Link>

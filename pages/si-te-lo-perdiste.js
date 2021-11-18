@@ -55,16 +55,26 @@ const CardVideo = ({ evento }) => {
     return (
         <div className="w-96 rounded-xl m-6 bg-white shadow-lg relative">
             <div className="relative h-60">
-                <iframe 
-                className="rounded-t-xl"
-                src={`https://www.youtube.com/embed/${evento.embedCod}`}
-                    frameBorder='0'
-                    allow='encrypted-media'
-                    allowFullScreen
-                    title='video'
-                    width='100%'
-                    height='100%'
-                />
+                {
+                    evento.origen===1 ?
+                    <iframe
+                    className="rounded-t-xl"
+                      id="vid_frame" src={`https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fcclambayeque%2Fvideos%2F${evento.embedCod}%2F&show_text=false&width=560&t=0`}
+                      width='100%'
+                      height='100%'
+                      allowFullScreen={true} title="" />
+                      :
+                      <iframe 
+                      className="rounded-t-xl"
+                      src={`https://www.youtube.com/embed/${evento.embedCod}`}
+                          frameBorder='0'
+                          allow='encrypted-media'
+                          allowFullScreen
+                          title='video'
+                          width='100%'
+                          height='100%'
+                      />
+                }
             </div>
             <div className="pt-1 pb-5 px-5  text-blackText bg-white rounded-xl">
                 <p className="font-bold mt-2 text-lg leading-tight">{evento.title} <span className="text-sm font-normal"> - {evento.speaker}</span></p>
